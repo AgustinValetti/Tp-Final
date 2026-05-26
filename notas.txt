@@ -1,0 +1,25 @@
+// ... 
+nombre de marca a definir
+colores de marca:
+    background: linear-gradient(90deg,rgba(92, 204, 120, 1) 13%, rgba(156, 156, 156, 1) 100%);
+    
+    Opcion 2:
+    background: linear-gradient(90deg,rgba(138, 219, 171, 1) 13%, rgba(156, 156, 156, 1) 100%);
+    Colores principales:
+    OPCION:
+    Color 1: #5CCC78
+    Color 1: #9C9C9C
+
+    OPCION 2:
+    // #8ADBAB
+    // #9C9C9C
+
+Pantallas :
+    Pantalla para ingresar nombre de usuario (Una vez que ingresa el nombre de usuario valida que existe con un boton de continuar, si no existe la pagina vuelve a pedir ingresar el nombre de usuario y una vez que verifica que hay un nombre de usuario ingresado lo lleva al catalogo de la pagina)
+    Pantalla con catalogo
+    Pantalla con carrito (Volver al catalogo, boton limpiar carrito, botones sumar/restar/eliminar producto del carrito)
+    Pantalla ticket final 
+
+Arrays :
+    Catalogo de celulares 
+    Catalogo de fundas

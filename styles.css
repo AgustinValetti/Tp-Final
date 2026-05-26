@@ -1,0 +1,233 @@
+/* --- Estilos generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos pantalla de validacion */
+    /* <div class="container-form">
+    <h2>Bienvenido</h2>
+    <form action="/procesar-nombre" method="POST">
+        <label for="nombre">Ingresa tu nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <button type="submit">Ingresar</button>
+    </form>
+    </div> */
+.container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 47.4vw;
+}
+h2{
+
+    font-size: 5rem;
+    color: white;
+}
+
+h2:hover{
+    color: #65fdcff8;
+    transition: 0.5s ease-in;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+
+form input{
+    padding: 6px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+form button{
+    padding: 6px;
+    width: 180px;
+    margin-top: 10px;
+
+    border: 1px solid #65fdcf;
+    border-radius: 20px;
+
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+form button:hover{
+    background-color: #65fdcf1c;
+    transition: 0.5s ease-in;
+    transform: scale(1.08);
+}
+/* HEADER */
+header {
+    display: flex;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px #65fdcf;
+    background: rgba(138, 219, 171, 1);
+    top: 0;
+    
+    
+}
+
+header a{
+    text-decoration: none;
+}
+
+h1{
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+h1:hover{
+    color: #65fdcf;
+    transition: ease-in-out 0.7s;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+    cursor: pointer;
+    margin-left: 40px;
+    
+}
+
+header nav a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* BODY */
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    background: linear-gradient(180deg,rgba(138, 219, 171, 1) 13%, rgba(156, 156, 156, 1) 100%);
+
+}
+
+
+/* Estilos dinamicos // */
+
+#contenedor-productos .card{
+    width: 360px;
+    height: 540px;
+    padding: 15px;
+    margin: 15px;
+    
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    
+    border: solid 2px #65fdcf;
+    border-radius: 20px;
+
+    background-color: rgba(156, 156, 156, 0.11);
+    box-shadow: 12px 10px 12px 0px #65fdcf;
+
+}
+
+#contenedor-productos{
+    margin-top: 80px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+
+#contenedor-productos img{
+    width: 200px;
+}
+
+#contenedor-productos h2{
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#contenedor-productos p{
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+
+
+}
+
+#contenedor-productos ul{
+    color: white;
+
+    
+}
+
+#contenedor-productos button{
+
+    padding: 6px;
+    width: 180px;
+    margin-top: 10px;
+
+    border: 1px solid #65fdcf;
+    border-radius: 20px;
+
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+#contenedor-productos button:hover{
+
+
+    background-color: #65fdcf1c;
+    transition: 0.5s ease-in;
+    transform: scale(1.08);
+}
+
+    /* <div class="card">
+
+      <img src="${producto.imagen}" alt="${producto.nombre}">
+
+      <h2>${producto.nombre}</h2>
+
+      <p>$${producto.precio}</p>
+
+      <button>Comprar</button>
+
+    </div> */
