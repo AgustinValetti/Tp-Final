@@ -17,13 +17,29 @@
         </nav>
     </header> -->
 
+    <!-- FORMULARIO -->
+    <div class="container-form" id="pantalla-login">
+        <h2>Bienvenido</h2>
+        <form id="formulario" action="/procesar-nombre" method="POST">
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="mensaje-error"></p>
+    </div>
+        <!-- OPCIONES -->
+    <div class="container-opciones oculto" id="pantalla-opciones">
 
-    <div class="container-form">
-    <h2>Bienvenido</h2>
-    <form action="/procesar-nombre" method="POST">
-        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-        <button type="submit">Ingresar</button>
-    </form>
+        <h2 class="saludo" id="saludo"></h2>
+
+        <a href="./pages/celulares/celulares.html">
+            <button>Celulares</button>
+        </a>
+
+        <a href="./pages/auriculares/auriculares.html">
+            <button>Auriculares</button>
+        </a>
+        <button id="btn-logout">Cerrar sesión</button>
+
     </div>
 
 

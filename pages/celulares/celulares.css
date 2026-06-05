@@ -1,0 +1,94 @@
+/* Contenedor productos */
+
+#contenedor-productos{
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Card */
+
+#contenedor-productos .card{
+    width: 360px;
+    height: 540px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #65fdcf;
+    border-radius: 20px;
+
+    background-color: rgba(156,156,156,.11);
+    box-shadow: 12px 10px 12px #65fdcf;
+}
+
+/* Imagen */
+
+#contenedor-productos img{
+    width: 200px;
+}
+
+/* Titulo */
+
+#contenedor-productos h2{
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Precio */
+
+#contenedor-productos p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Lista */
+
+#contenedor-productos ul{
+    color: white;
+}
+
+#contenedor-productos li{
+    margin-bottom: 5px;
+}
+
+.footer-newsletter{
+    text-align: center;
+}
+
+.footer-links{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* Boton */
+
+#contenedor-productos button{
+    width: 180px;
+    padding: 6px;
+    margin-top: 10px;
+
+    border: 1px solid #65fdcf;
+    border-radius: 20px;
+
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+#contenedor-productos button:hover{
+    background-color: #65fdcf1c;
+    transform: scale(1.08);
+    transition: .5s;
+}

@@ -1,0 +1,91 @@
+/* Main */
+
+main{
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* Tabla */
+
+#tabla-carrito{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Encabezado */
+
+.fila-header-carrito{
+    background-color: rgba(0,0,0,.2);
+}
+
+.celda-header-tabla-carrito{
+    color: white;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+/* Filas */
+
+#tabla-carrito td{
+    color: white;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+.footer-links{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.footer-newsletter{
+    text-align: center;
+}
+
+/* Boton */
+
+.btn-limpiar-carrito{
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    border: 1px solid #65fdcf;
+    border-radius: 20px;
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+}
+
+.btn-limpiar-carrito:hover{
+    background-color: #65fdcf1c;
+    transition: .5s;
+    transform: scale(1.08);
+}
+
+#tabla-carrito img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 4px;
+}
+
+#tabla-carrito td {
+    vertical-align: middle;
+    padding: 12px 16px;
+}
+
+
+/* Total */
+
+#valor-final{
+    margin-top: 20px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}

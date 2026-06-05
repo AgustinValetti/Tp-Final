@@ -1,48 +1,227 @@
-/* --- Estilos generales --- */
-* {
+/* Reset */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* Estilos pantalla de validacion */
-    /* <div class="container-form">
-    <h2>Bienvenido</h2>
-    <form action="/procesar-nombre" method="POST">
-        <label for="nombre">Ingresa tu nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-        <button type="submit">Ingresar</button>
-    </form>
-    </div> */
-.container-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 47.4vw;
+/* Body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        180deg,
+        rgba(138, 219, 171, 1) 13%,
+        rgba(156, 156, 156, 1) 100%
+    );
+    min-height: 100vh;
 }
-h2{
 
-    font-size: 5rem;
+/* Header */
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px #65fdcf;
+}
+
+header a{
+    text-decoration: none;
+    position: relative;
+}
+
+header a::after{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #65fdcf, transparent);
+    transform: scaleX(0);
+    transition: transform .5s ease;
+}
+
+header a:hover::after{
+    transform: scaleX(1);
+}
+
+h1{
+    color: white;
+    cursor: pointer;
+}
+
+h1:hover{
+    color: #65fdcf;
+    transition: .7s;
+}
+
+header nav{
+    display: flex;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+header nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer{
+    width: 80%;
+    margin: auto;
+    padding: 40px 70px;
+    border-radius: 20px;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
     color: white;
 }
 
-h2:hover{
-    color: #65fdcff8;
-    transition: 0.5s ease-in;
+.phone{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.footer-newsletter form{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.footer-newsletter input{
+    width: 260px;
+    padding: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.footer-newsletter button,
+.footer-links button{
+    padding: 12px;
+    border: 1px solid #65fdcf;
+    border-radius: 20px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    width: auto;
+    
+    font-weight: bold;
+}
+
+.footer-newsletter button:hover,
+.footer-links button:hover{
+    background-color: #65fdcf1c;
+    transform: scale(1.08);
+    transition: .5s;
+}
+
+.apps{
+    display: flex;
+    gap: 10px;
+}
+
+.apps img{
+    width: 140px;
+}
+
+.footer hr{
+    margin: 30px 0;
+}
+
+.footer-links{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 40px;
+    color: white;
+}
+
+.footer-links a{
+    display: block;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    color: white;
+    text-decoration: none;
 
 }
+
+.footer-links a:hover{
+    transition: 1s;
+    transform: scale(1.02);
+    color: #65fdcf;
+}
+
+.footer-social h2{
+    margin-top: 30px;
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.social-icons img:hover{
+    transform: scale(1.1);
+    filter: invert(88%) sepia(39%) saturate(312%) hue-rotate(96deg)
+    brightness(103%) contrast(98%);
+}
+
+.footer-bottom{
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #ccc;
+    color: white;
+}
+
+
+/* Pantalla login */
+
+.container-form{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.container-form h2{
+    font-size: 7rem;
+    color: white;
+}
+
+.container-form h2:hover{
+    color: #65fdcff8;
+    transition: .5s;
+}
+
+/* Formulario */
 
 form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     justify-content: center;
-    margin-bottom: 10px;
+    align-items: center;
 }
-
-
 
 form input{
     padding: 6px;
@@ -55,179 +234,76 @@ form input{
 form button{
     padding: 6px;
     width: 180px;
-    margin-top: 10px;
 
     border: 1px solid #65fdcf;
     border-radius: 20px;
 
-    font-size: 1rem;
-    font-weight: 800;
-    text-align: center;
-
     color: white;
     background-color: transparent;
-    cursor: pointer;
 
+    cursor: pointer;
 }
 
 form button:hover{
     background-color: #65fdcf1c;
-    transition: 0.5s ease-in;
+    transition: .5s;
     transform: scale(1.08);
 }
-/* HEADER */
-header {
-    display: flex;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px #65fdcf;
-    background: rgba(138, 219, 171, 1);
-    top: 0;
-    
-    
+
+/* Oculto */
+
+.oculto{
+    display: none;
 }
 
-header a{
-    text-decoration: none;
-}
+/* Pantalla opciones */
 
-h1{
-    cursor: pointer;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-opciones{
+    min-height: 100vh;
 
-}
-
-
-
-h1:hover{
-    color: #65fdcf;
-    transition: ease-in-out 0.7s;
-}
-
-header nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    
-    cursor: pointer;
-    margin-left: 40px;
-    
-}
-
-header nav a{
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-/* BODY */
-
-body {
-    font-family:Arial, Helvetica, sans-serif;
-    font-optical-sizing: auto;
-    background: linear-gradient(180deg,rgba(138, 219, 171, 1) 13%, rgba(156, 156, 156, 1) 100%);
-
-}
-
-
-/* Estilos dinamicos // */
-
-#contenedor-productos .card{
-    width: 360px;
-    height: 540px;
-    padding: 15px;
-    margin: 15px;
-    
     display: flex;
     flex-direction: column;
 
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    
-    border: solid 2px #65fdcf;
-    border-radius: 20px;
 
-    background-color: rgba(156, 156, 156, 0.11);
-    box-shadow: 12px 10px 12px 0px #65fdcf;
-
+    gap: 20px;
 }
 
-#contenedor-productos{
-    margin-top: 80px;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-
-
-
-#contenedor-productos img{
-    width: 200px;
-}
-
-#contenedor-productos h2{
+.container-opciones h2{
+    font-size: 7rem;
     color: white;
-    margin: 10px;
-    cursor: pointer;
-    text-align: center;
 }
 
-#contenedor-productos p{
-
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: white;
-
-
+.container-opciones h2:hover{
+    color: #65fdcff8;
+    transition: .5s;
 }
 
-#contenedor-productos ul{
-    color: white;
-
-    
-}
-
-#contenedor-productos button{
-
+.container-opciones button{
     padding: 6px;
     width: 180px;
-    margin-top: 10px;
 
     border: 1px solid #65fdcf;
     border-radius: 20px;
 
-    font-size: 1rem;
-    font-weight: 800;
-    text-align: center;
-
     color: white;
     background-color: transparent;
-    cursor: pointer;
 
+    cursor: pointer;
 }
 
-#contenedor-productos button:hover{
-
-
+.container-opciones button:hover{
     background-color: #65fdcf1c;
-    transition: 0.5s ease-in;
+    transition: .5s;
     transform: scale(1.08);
 }
 
-    /* <div class="card">
+/* Error */
 
-      <img src="${producto.imagen}" alt="${producto.nombre}">
-
-      <h2>${producto.nombre}</h2>
-
-      <p>$${producto.precio}</p>
-
-      <button>Comprar</button>
-
-    </div> */
+#mensaje-error{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+}
